@@ -1,0 +1,18 @@
+@import "../../libs/normalize-scss/sass/normalize/import-now";
+@import "fonts";
+@import "slick";
+@import "vars";
+@import "media";
+
+
+@import "global";
+@import "header/header";
+@import "header/header-top";
+@import "header/header-bottom";
+
+@import "section-surf";
+@import "section-holder";
+@import "section-shop";
+@import "footer";
+
+

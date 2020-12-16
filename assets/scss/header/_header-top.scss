@@ -1,0 +1,71 @@
+.header__top {
+
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 122px;
+    font-size: 1.25rem;
+    font-family: 'SFProDisplay-Bold', sans-serif;
+    font-weight: 700;
+  }
+}
+
+.menu__item {
+  display: inline-block;
+}
+
+.menu__item + .menu__item {
+  padding-left: 50px;
+}
+
+.header__box {
+  display: flex;
+}
+
+.header__adress {
+  position: relative;
+  margin-right: 60px;
+  width: 265px;
+  padding-left: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(/assets/images/adress-icon.svg);
+    width: 30px;
+    height: 30px;
+    top: -10px;
+    left: 0;
+  }
+}
+
+.user-list {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+
+  &__item {
+    padding-right: 10px;
+  }
+} 
+
+.basket {
+  position: relative;
+}
+
+.basket__num {
+  position: absolute;
+  font-weight: 500;
+  font-size: 0.625rem;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+  background-color:  #1c62cd;
+  border-radius: 50%;
+  text-align: center;
+  right: -14px;
+  bottom: -14px;
+
+  color: #ffffff;
+}
