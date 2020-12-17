@@ -456,38 +456,6 @@ template {
   display: none;
 }
 
-@font-face {
-  font-family: 'SFProDisplay-Regular', sans-serif;
-  src: url(/libs/fonts/SFProDisplay-Regular.woff2) format("woff2"), url(/libs/fonts/SFProDisplay-Regular.woff) format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'SFProDisplay-Medium', sans-serif;
-  src: url(/libs/fonts/SFProDisplay-Medium.woff2) format("woff2"), url(/libs/fonts/SFProDisplay-Medium.woff) format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'SFProDisplay-Semibold', sans-serif;
-  src: url(/libs/fonts/SFProDisplay-Semibold.woff2) format("woff2"), url(/libs/fonts/SFProDisplay-Semibold.woff) format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'SFProDisplay-Bold', sans-serif;
-  src: url(/libs/fonts/SFProDisplay-Bold.woff2) format("woff2"), url(/libs/fonts/SFProDisplay-Bold.woff) format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* Slider */
 .slick-slider {
   position: relative;
@@ -593,6 +561,38 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: 'SFProDisplay-Regular', sans-serif;
+  src: url(/libs/fonts/SFProDisplay-Regular.woff2) format("woff2"), url(/libs/fonts/SFProDisplay-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Medium', sans-serif;
+  src: url(/libs/fonts/SFProDisplay-Medium.woff2) format("woff2"), url(/libs/fonts/SFProDisplay-Medium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Semibold', sans-serif;
+  src: url(/libs/fonts/SFProDisplay-Semibold.woff2) format("woff2"), url(/libs/fonts/SFProDisplay-Semibold.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Bold', sans-serif;
+  src: url(/libs/fonts/SFProDisplay-Bold.woff2) format("woff2"), url(/libs/fonts/SFProDisplay-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ul */
 /* xl */
 /* xlm */
@@ -628,18 +628,26 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+p {
+  margin: 0;
+}
+
 body {
   color: #2f3035;
   font-family: 'SFProDisplay-Semibold', sans-serif;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 400px;
+  font-weight: 400;
 }
 
 .container {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.price {
+  font-family: 'Barlow', sans-serif;
 }
 
 .header__top-inner {
@@ -720,4 +728,244 @@ body {
   right: -14px;
   bottom: -14px;
   color: #ffffff;
+}
+
+.header__bottom {
+  margin-bottom: 78px;
+}
+
+.menu-categories {
+  background-color: #f0f0f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 53px;
+}
+
+.menu-categories__link {
+  position: relative;
+  font-size: 1.25rem;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 15px 0 14px;
+}
+
+.menu-categories__link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  left: auto;
+  bottom: -2px;
+  right: 0;
+  background-color: #1c62cd;
+  height: 3px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.menu-categories__link:hover {
+  color: #000000;
+}
+
+.menu-categories__link:hover::before {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.banner-section__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.banner-section__slider {
+  max-width: 870px;
+}
+
+.banner-section__slider-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 400px;
+}
+
+.banner-section__slider-btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translatey(-50%);
+      -ms-transform: translatey(-50%);
+          transform: translatey(-50%);
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.banner-section__slider-btnprev {
+  left: 20px;
+}
+
+.banner-section__slider-btnnext {
+  right: 20px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.slick-dots li {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.slick-dots button {
+  padding: 0;
+  font-size: 0;
+  margin: 0;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.slick-active button {
+  background-color: #ffffff;
+}
+
+.sale-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 265px;
+  text-align: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+}
+
+.sale-item__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.sale-item__info {
+  color: #ffffff;
+  background-color: #1c62cd;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+
+.sale-item__price {
+  text-align: right;
+}
+
+.sale-item__price-new {
+  position: relative;
+  font-weight: 700;
+  font-size: 1.6875rem;
+  line-height: 32px;
+  color: #1c62cd;
+  margin-right: 6px;
+  padding-right: 20px;
+}
+
+.sale-item__price-new::after {
+  content: "";
+  background-image: url(/assets/images/icons-price.svg);
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 15px;
+  height: 18px;
+}
+
+.sale-item__price-old {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 17px;
+  color: #c4c4c4;
+  margin-right: 15px;
+  padding: 2px 5px;
+  background-repeat: no-repeat;
+  background-image: url("/assets/images/old-line.svg");
+}
+
+.sale-item__price-old::after {
+  content: "";
+  background-image: url("/assets/images/icons-price-old.svg");
+  position: absolute;
+  right: -10px;
+  top: 5px;
+  width: 8px;
+  height: 10px;
+}
+
+.sale-item__img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.sale-item__title {
+  font-family: 'SFProDisplay-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 21px;
+  text-align: center;
+  margin-bottom: 7px;
+  color: #2F3035;
+}
+
+.sale-item__footer {
+  background: #f0f0f4;
+  border-radius: 3px;
+  padding: 25px 20px;
+  font-size: 1.125rem;
+  line-height: 21px;
+  text-align: center;
+  color: #2f3035;
+}
+
+.sale-item__footer span {
+  display: block;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.125rem;
+  line-height: 22px;
+  font-weight: 700;
+  text-align: center;
+  color: #1c62cd;
 }

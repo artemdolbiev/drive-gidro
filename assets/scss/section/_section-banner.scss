@@ -1,0 +1,174 @@
+.banner-section__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-section__slider {
+  max-width: 870px;
+
+  &-img {
+    object-fit: cover;
+    min-height: 400px;
+  }
+
+  &-btn {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &-btnprev {
+    left: 20px;
+  }
+
+  &-btnnext {
+    right: 20px;
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  & li {
+    display: inline-block;
+    padding: 0 5px;
+  }
+
+  & button {
+    padding: 0;
+    font-size: 0;
+    margin: 0;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+}
+
+.slick-active {
+
+  & button {
+    background-color: #ffffff;
+  }
+}
+
+.sale-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 265px;
+  text-align: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__info {
+    color: #ffffff;
+    background-color: #1c62cd;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+  }
+  
+  &__price {
+    text-align: right;
+    &-new {
+      position: relative;
+      font-weight: 700;
+      font-size: 1.6875rem;
+      line-height: 32px;
+      color: #1c62cd;
+      margin-right: 6px;
+      padding-right: 20px;
+
+      &::after {
+        content: "";
+        background-image: url(/assets/images/icons-price.svg);
+        position: absolute;
+        right: 0;
+        top: 8px;
+        width: 15px;
+        height: 18px;
+      }
+    }
+
+    &-old {
+      position: relative;
+      display: inline-block;
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 17px;
+      color: #c4c4c4;
+      margin-right: 15px;
+      padding: 2px 5px;
+      background-repeat: no-repeat;
+      background-image: url('/assets/images/old-line.svg');
+
+      &::after {
+        content: "";
+        background-image: url('/assets/images/icons-price-old.svg');
+        position: absolute;
+        right: -10px;
+        top: 5px;
+        width: 8px;
+        height: 10px;
+      }
+    
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+  }
+
+  &__title {
+    font-family: 'SFProDisplay-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 21px;
+    text-align: center;
+    margin-bottom: 7px;
+
+    color: #2F3035;
+  }
+
+  &__footer {
+    background: #f0f0f4;
+    border-radius: 3px;
+    padding: 25px 20px;
+
+    font-size: 1.125rem;
+    line-height: 21px;
+    text-align: center;
+    color: #2f3035;
+
+    & span {
+      display: block;
+      font-family: 'Barlow', sans-serif;
+      font-size: 1.125rem;
+      line-height: 22px;
+      font-weight: 700;
+      text-align: center;
+      color:#1c62cd;
+    }
+  }
+
+}

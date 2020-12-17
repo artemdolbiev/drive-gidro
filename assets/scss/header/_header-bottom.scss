@@ -1,0 +1,40 @@
+.header__bottom {
+  margin-bottom: 78px;
+}
+
+.menu-categories {
+  background-color: #f0f0f4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 53px;
+
+  &__link {
+    position: relative;
+    font-size: 1.25rem;
+    transition: all 0.5s;
+    padding: 15px 0 14px;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      left: auto;
+      bottom: -2px;
+      right: 0;
+      background-color: #1c62cd;
+      height: 3px;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      color: #000000;
+
+      &::before {
+        width: 100%;
+        right: auto;
+        left: 0;
+      }
+    }
+  }
+}
