@@ -16,10 +16,6 @@
 
 .search__content {
 
-  &-item {
-    display: none;
-  }
-
   &-form {
     display: flex;
   }
@@ -58,6 +54,10 @@
   }
 }
 
-.search__content-item.tabs-content--active {
+.tabs-content {
+  display: none;
+}
+
+.tabs-content.tabs-content--active {
   display: block;
 }

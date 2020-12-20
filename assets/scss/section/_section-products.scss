@@ -1,0 +1,230 @@
+.products {
+  margin-bottom: 86px;
+  &__title {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    font-size: 1.5625rem;
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
+
+  &__tabs {
+    margin-bottom: 25px;
+  }
+  &__tab {
+    margin-bottom: 10px
+  }
+}
+
+.products__tab + .products__tab {
+  margin-left: 50px;
+}
+
+.products__tab.tab--active {
+  border-bottom: 2px solid #1c62cd;
+}
+
+.product-item {
+  &__wrapper {
+    position: relative;
+    width: 271px;
+    margin: 0 auto;
+  }
+}
+
+
+.product-item {
+  min-height: 403px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  text-align: center;
+  padding: 52px 20px 31px;
+  transition: all 0.5s;
+  &:hover {
+    box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+    border-radius: 3px;
+
+    .product-item__price,
+    .product-item__title {
+      color: #1c62cd;
+    }
+
+    .product-item__notify-text {
+      color: #2f3035;
+    }
+
+    .product-item__hover-text {
+      opacity: 1;
+    }
+  }
+
+
+  &__favorite {
+    position: absolute;
+    top: 16px;
+    right: 19px;
+    width: 24px;
+    height: 22px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    z-index: 6;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 22px;
+      top: 0;
+      left: 0;
+      background-image: url('/assets/images/favorit.svg');
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    font-weight: normal;
+    font-size: 1.125rem;
+    line-height: 21px;
+    padding: 14px 0 25px;
+  }
+
+  &__price {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 36px;
+  }
+
+  &__basket {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    padding-top: 7px;
+    background: #1c62cd !important;
+    border-radius: 10px 0px 0px 0px;
+    border: none;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+  }
+
+  &__hover-text {
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    font-size: 1.25rem;
+    padding: 18px 21px;
+    background-color: rgba(#ffffff, 0.9);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+}
+
+.product-item__favorite--active {
+  &::before{
+    background-image: url('/assets/images/favorit-active.svg');
+  }
+
+}
+
+.product-item--sale {
+  &::before {
+    content: "SALE";
+    padding: 8px 15px;
+    background-color: #1c62cd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    font-size: 0.75rem;
+    line-height: 14px;
+    letter-spacing: 0.07em;
+  }
+}
+
+.product-item__wrapper.product-item__not-available .product-item__price {
+  display: none;
+}
+
+.product-item__notify-text {
+  display: none;
+  font-family: 'SFProDisplay-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 21px;
+}
+
+.product-item__wrapper.product-item__not-available .product-item__notify-text {
+  display: block;
+}
+
+.product-item__wrapper.product-item__not-available .product-item__basket {
+  display: none;
+}
+
+.product-item__notify-link {
+  display: none;
+}
+
+.product-item__wrapper.product-item__not-available .product-item__notify-link {
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  line-height: 19px;
+  text-align: center;
+  color: #1c62cd;
+}
+
+.product-item__wrapper.product-item__not-available .product-item__notify-link span {
+  border-bottom: 1px solid #1c62cd;
+}
+
+.product-item__wrapper.product-item__not-available .product-item__title {
+  padding-bottom: 13px;
+}
+
+.product-slider__slider {
+
+  &-btn {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &-btnprev {
+    left: -40px;
+  }
+
+  &-btnnext {
+    right: -40px;
+  }
+}
+
+.product__more {
+  margin: 35px 0 0;
+  text-align: center;
+
+  &-link {
+    background: #f0f0f4;
+    font-size: 0.9375rem;
+    line-height: 18px;
+    padding: 16px 43px;
+
+    text-align: center;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+}
+
