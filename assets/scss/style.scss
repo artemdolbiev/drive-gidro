@@ -10,10 +10,12 @@
 @import "header/header-top";
 @import "header/header-bottom";
 
-@import "section/section-banner";
-@import "section/section-search";
-@import "section/section-categories";
-@import "section/section-products";
+@import "section-index/section-banner";
+@import "section-index/section-search";
+@import "section-index/section-categories";
+@import "section-index/section-products";
+
+@import "section-catalog/breadcrumbs";
 @import "footer";
 
 
