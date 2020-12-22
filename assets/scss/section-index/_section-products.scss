@@ -29,12 +29,22 @@
     position: relative;
     width: 271px;
     margin: 0 auto;
+    transition: all 0.3s;
   }
+}
+
+.product-item__wrapper.product-item__wrapper--list {
+  width: 100%;
+}
+
+.product-item__wrapper--list .product-item__hover-text{
+  right: 32px;
 }
 
 
 .product-item {
   min-height: 403px;
+  width: 100%;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
   text-align: center;
