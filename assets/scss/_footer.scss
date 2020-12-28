@@ -7,12 +7,31 @@
 
   &-inner {
     display: flex;
-    justify-content: space-between;
+    @include lg-min {
+      justify-content: space-between;
+    }
+    @include lg-sm {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    @include sm {
+      flex-wrap: wrap;
+      justify-content: start;
+    }
   }
 
   &-newslatter {
     width: 295px !important;
-    margin-right: 51px;
+
+    @include sm-min {
+      margin-right: 51px;
+    }
+    @include sm {
+      width: 290px;
+      text-align: center;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   &-title {
@@ -20,20 +39,54 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
+
+    &.footer__topdrop {
+      @include sm {
+        font-family: 'SFProDisplay-Medium', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 15px 0;
+        color: #7f7f7f;
+      }
+    }
   }
 
   &-item {
-    width: 200px;
+    @include lg-min {
+      width: 200px;
+    }
+
+    @include lg-sm {
+      width: 200px;
+      margin-bottom: 25px;
+    }
+    @include sm {
+      width: 100%;
+      margin-bottom: 25px;
+      border-bottom: 2px solid #f9f9fc;
+    }
   }
 
   &-social {
-    width: 250px;
+
+    @include sm-min {
+      width: 250px;
+    }
+    @include sm {
+      width: 100%;
+      justify-content: center;
+      border: none;
+    }
   }
 }
 
 .footer-list {
   font-size: 14px;
   line-height: 22px;
+  @include sm {
+    display: none;
+  }
 }
 
 .footer-form {
@@ -53,7 +106,6 @@
   }
 
   &__btn {
-    padding: 10px 16px;
     border: none;
     background-color: #1C62CD;
 
@@ -67,6 +119,13 @@
 
     color: #ffffff;
 
+    @include sm-min {
+      padding: 10px 16px;
+    }
+    @include sm {
+      padding: 10px 8px;
+    }
+
   }
 }
 
@@ -74,6 +133,10 @@
   display: flex;
   align-items: center;
   height: 100%;
+
+  @include sm {
+    justify-content: center;
+  }
   
   &__item {
     margin-right: 30px;
@@ -82,9 +145,16 @@
 
 .footer__bottom {
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 46px 0 22px;
+
+  @include sm-min {
+    justify-content: center;
+    align-items: center;
+  }
+  @include sm {
+    flex-direction: column;
+    align-items: start;
+  }
 
   &-link {
     font-size: 0.625rem;
@@ -92,6 +162,45 @@
 
     color: #48494D;
 
-    margin: 0 40px;
+    @include sm-min {
+      margin: 0 40px;
+    }
+    @include sm {
+      margin: 12px 0;
+    }
+  }
+}
+
+.footer__topdrop {
+  position: relative;
+  @include sm-min {
+    pointer-events: none;
+  }
+  @include sm {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 21px;
+      right: 0;
+      width: 12px;
+      height: 8px;
+      background-image: url('/assets/images/arrow-down.svg');
+    }
+  }
+}
+
+.footer__top-itemdrop {
+  @include sm {
+    margin-bottom: 0;
+    border-top: 2px solid #f9f9fc;
+  }
+}
+
+.footer__topdrop--active {
+  @include sm {
+    &::after {
+      content: "";
+      transform: rotate(180deg);
+    }
   }
 }

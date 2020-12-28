@@ -181,36 +181,6 @@
   }
 }
 
-/* lgm */
-@mixin lgm-min {
-  @media (min-width: $lgm) {
-    @content;
-  }
-}
-
-@mixin lgm {
-  @media (max-width: $lgm - 0.2) {
-    @content;
-  }
-}
-
-@mixin lgm-md {
-  @media (max-width: $lgm - 0.2) and (min-width: $md) {
-    @content;
-  }
-}
-
-@mixin lgm-sm {
-  @media (max-width: $lgm - 0.2) and (min-width: $sm) {
-    @content;
-  }
-}
-
-@mixin lgm-xs {
-  @media (max-width: $lgm - 0.2) and (min-width: $xs) {
-    @content;
-  }
-}
 
 /* md */
 @mixin md-min {

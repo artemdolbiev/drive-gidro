@@ -33,6 +33,8 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  overflow-x: hidden;
+  min-width: 320px;
 }
 
 .container {
@@ -89,4 +91,31 @@ body {
 
 .banner__link {
   margin-bottom: 80px;
+
+  & img {
+    @include ul-min {
+      width: 100%;
+    }
+    @include ul {
+      width: 100%;
+    }
+  }
+}
+
+.banner .container {
+  @include md {
+    padding: 0;
+  }
+}
+
+.mobile-overflow {
+  @include lg {
+    width: 1000px;
+  }
+}
+
+.tabs-wrapper--no-scroll {
+  @include lg {
+    overflow-x: scroll;
+  }
 }

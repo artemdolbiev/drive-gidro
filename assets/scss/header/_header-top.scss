@@ -11,23 +11,135 @@
   }
 }
 
+.menu__btn {
+  @include lg-min {
+    display: none;
+  }
+
+  @include lg {
+    display: block;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &-line {
+    @include lg {
+      width: 34px;
+      height: 3px;
+      margin: 8px 0;
+      background: #2f3035;
+      border-radius: 3px;
+    }
+  }
+}
+
+.menu__list {
+  @include lg {
+    display: none;
+  }
+}
+
 .menu__item {
   display: inline-block;
 }
 
 .menu__item + .menu__item {
-  padding-left: 50px;
+  @include xl-min {
+    padding-left: 50px;
+  }
+  @include xl {
+    padding-left: 20px;
+  }
+}
+
+.menu-mobile {
+
+  &__list {
+    position: absolute;
+    width: 243px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    transform: translateX(-103%);
+    transition: all 0.3s;
+    z-index: 10;
+  }
+
+  &__item {
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &__link {
+    display: block;
+    padding-top: 23px;
+    padding-left: 53px;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    left: 11px;
+  }
+}
+
+.menu-mobile__list--active {
+  transform: translateX(0%);
+}
+
+.menu__mobile-linewrapper {
+  font-family: 'SFProDisplay-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  background-color: #f0f0f4;
+  @include lg-min {
+    display: none;
+  }
+  @include lg-xs {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  @include xs {
+    overflow-x: scroll;
+    margin-bottom: 25px;
+  }
+}
+
+.menu__mobile-line {
+  @include lg-xs {
+    text-align: center;
+    padding: 15px 0 15px 0;
+
+  }
+  @include xs {
+    min-width: 460px;
+    padding: 15px 0 15px 10px;
+  }
 }
 
 .header__box {
   display: flex;
 }
 
-.header__adress {
+.header__address {
   position: relative;
-  margin-right: 60px;
   width: 265px;
   padding-left: 30px;
+
+  @include xl-min {
+    margin-right: 60px;
+  }
+
+  @include xl-md {
+    margin-right: 20px;
+  }
+
+  @include md {
+    display: none;
+  }
 
   &::before {
     content: "";
@@ -64,8 +176,8 @@
   background-color:  #1c62cd;
   border-radius: 50%;
   text-align: center;
-  right: -12px;
-  bottom: -11px;
+  right: -13px;
+  bottom: -2px;
 
   color: #ffffff;
 }

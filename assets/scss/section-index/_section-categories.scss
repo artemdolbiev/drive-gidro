@@ -1,7 +1,15 @@
 .categories__inner {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  @include ul-min {
+    justify-content: space-between;
+  }
+  @include ul-xl {
+    justify-content: space-around;
+  }
+  @include xl {
+    justify-content: space-around;
+  }
 }
 
 .categories__item {
@@ -12,8 +20,14 @@
   box-sizing: border-box;
   border-radius: 3px;
   width: 370px;
-  padding: 20px 20px 16px;
   transition: all 0.3s;
+
+  @include xs-min {
+    padding: 20px 20px 16px;
+  }
+  @include xs {
+    padding: 20px 5px 16px;
+  }
 
   &:hover {
 

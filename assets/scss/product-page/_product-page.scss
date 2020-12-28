@@ -3,13 +3,31 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include lg-min {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include lg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
   }
 
   &__img-box {
-    width: 500px;
+    
     padding-top: 64px;
     text-align: center;
     position: relative;
+
+    @include sm-min {
+      width: 500px;
+    }
+    @include sm {
+      width: 100%;
+    }
 
     &::before {
       font-size: 15px;
@@ -49,14 +67,24 @@
 
   &__content {
     width: 570px;
+
+    @include lg {
+      order: -1;
+    }
   }
 
   &__title {
     font-family: 'SFProDisplay-Bold', sans-serif;
     font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
     margin-bottom: 10px;
+    @include sm-min {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    @include sm {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   &__code {
@@ -70,7 +98,19 @@
     margin-bottom: 50px;
 
     & a + a {
-      margin-left: 30px;
+      @include sm-min {
+        margin-left: 30px;
+      }
+
+      @include sm {
+        margin-left: 18px;
+      }
+    }
+  }
+
+  &__tabs {
+    @include lg {
+      display: none;
     }
   }
 
@@ -136,7 +176,188 @@
       border-radius: 3px;
       border: none;
       cursor: pointer;
+
+      @include sm {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.product-card__img {
+  @include sm {
+    width: 100%;
+  }
+}
+
+.product-card__btn-mobile {
+  @include lg-min {
+    display: none;
+  }
+  @include lg {
+    display: block;
+    margin-top: 40px;
+  }
+}
+
+.card {
+
+  &__tab {
+    font-size: 20px;
+    line-height: 24px;
+    opacity: 0.6;
+
+    &.tab--active {
+      border-bottom: 2px solid #1c62cd;
+      opacity: 1;
+    }
+
+    &-box {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: #F0F0F4;
+      padding: 22px 0;
+      margin-bottom: 50px;
     }
   }
 
+  &__top-line {
+    margin-bottom: 10px;
+
+    & label {
+      @include lg {
+        display: block;
+        width: 100%;
+        margin-bottom: 25px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__label {
+    &-search {
+      font-size: 17px;
+      line-height: 20px;
+      color: rgba(#2f3035, 0.7);
+    }
+
+    &-pickup {
+      margin-left: 54px;
+      font-size: 17px;
+      color: rgba(#2f3035, 0.7);
+      @include lg-min {
+        line-height: 20px;
+      }
+      @include lg {
+        border-bottom: 1px solid #c4c4c4;
+        line-height: 30px;
+      }
+    }
+  }
+
+  &__input {
+
+    &-search {
+      position: relative;
+      padding: 9px 37px 9px 17px;
+      background: #f0f0f4;
+      border-radius: 3px;
+      border: none;
+      @include xl-min {
+        margin-right: 100px;
+        margin-left: 17px;
+      }
+      @include xl-xs {
+        margin-right: 50px;
+        margin-left: 17px;
+      }
+      @include xs {
+        margin: 20px 50px 0 0;
+      }
+
+      &::placeholder {
+        font-size: 15px;
+        line-height: 18px;
+        color: #c4c4c4;
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 100px;
+
+    &-item {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(#2f3035, 0.1);
+      line-height: 22px;
+      color: rgba(#2f3035, 0.7);
+      @include lg-min {
+        display: flex;
+      }
+      @include lg {
+        display: block;
+      }
+
+      & div {
+        @include lg {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    &-itemtitle {
+      font-size: 20px;
+      line-height: 24px;
+      color: #2f3035;
+      @include lg {
+        display: none;
+      }
+    }
+
+    &-address {
+      width: 220px;
+      margin-right: 80px;
+    }
+
+    &-workhours {
+      width: 157px;
+      margin-right: 96px;
+    }
+
+    &-avialable {
+      width: 140px;
+      margin-right: 60px;
+    }
+
+    &-num {
+      width: 104px;
+    }
+
+    &-btn {
+      margin-left: auto;
+
+      & button {
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 9px 40px;
+        color: #ffffff;
+        background: #1c62cd;
+        border-radius: 3px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.workhours {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabs-container {
+  
 }

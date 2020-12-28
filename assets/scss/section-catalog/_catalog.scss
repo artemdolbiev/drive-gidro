@@ -10,9 +10,15 @@
   }
 
   &__filter {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 50px;
+
+    @include lg-min {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include lg {
+      display: block;
+    }
 
     &-items {
 
@@ -27,7 +33,9 @@
         border-radius: 3px;
         border: none;
         cursor: pointer;
+
         margin: 0;
+        
 
         & + button {
           margin-left: 10px;
@@ -39,10 +47,18 @@
       display: flex;
       align-items: center;
 
+      @include lg {
+        margin-top: 30px;
+      }
+
       & button {
         background-color: transparent;
         border: none;
         cursor: pointer;
+
+        @include lg {
+          display: none;
+        }
       }
     }
 
@@ -68,6 +84,9 @@
 
   &__inner {
     display: flex;
+    @include md {
+      flex-wrap: wrap;
+    }
 
     &-aside {
       min-width: 290px;
@@ -76,8 +95,13 @@
 
     &-list {
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
+      @include ul-min {
+        justify-content: space-between;
+      }
+      @include ul {
+        justify-content: space-around;
+      }
 
       & .product-item__wrapper {
         margin-bottom: 30px;
@@ -89,6 +113,25 @@
     }
   }
 }
+
+.aside__btn {
+  @include md-min {
+    display: none;
+  }
+  @include md {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #1c62cd;
+    cursor: pointer;
+  }
+}
+
 
 .catalog__filter-button--active {
   opacity: 1;
@@ -132,9 +175,16 @@
       padding: 8px 12px;
       border: 2px solid transparent;
       color: #c4c4c4;
-      margin: 0 5px;
       font-size: 18px;
       line-height: 22px;
+      @include xs-min {
+        padding: 8px 12px;
+        margin: 0 5px;
+      }
+      @include xs {
+        padding: 8px 6px;
+        margin: 0 3px;
+      }
 
       & a {
         display: block;
@@ -150,6 +200,13 @@
 
 .aside-filter {
 
+  @include md-min {
+    display: block;
+  }
+
+  @include md {
+    display: none;
+  }
   &__tabs {
     display: flex;
     justify-content: space-between;

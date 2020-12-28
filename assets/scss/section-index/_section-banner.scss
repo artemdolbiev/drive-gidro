@@ -1,14 +1,57 @@
 .banner-section__inner {
-    display: flex;
+  display: flex;
+  @include ul-min {
     justify-content: space-between;
+  }
+  @include ul-lg {
+    justify-content: space-around;
+  }
+  @include lg {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.banner-section .container {
+  @include md {
+    padding: 0;
+  }
 }
 
 .banner-section__slider {
-  max-width: 870px;
+  @include ul-min {
+    max-width: 870px;
+  }
+  @include ul-lg {
+    max-width: 600px;
+  }
+  @include lg {
+    max-width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
 
   &-img {
-    object-fit: cover;
-    min-height: 400px;
+    @include ul-min {
+      object-fit: cover;
+      min-height: 400px;
+    }
+    @include ul-lg {
+      min-height: 380px;
+      width: 600px;
+    }
+    @include lg-md {
+      max-width: 100%;
+      min-height: 380px;
+    }
+    @include md-xs {
+      max-width: 100%;
+      min-height: 200px;
+    }
+    @include xs {
+      max-width: 100%;
+      min-height: 160px;
+    }
   }
 
   &-btn {

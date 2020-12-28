@@ -20,9 +20,14 @@
       <div class="container">
         <div class="header__top-inner">
           <nav class="menu">
+            <button class="menu__btn">
+              <div class="menu__btn-line"></div>
+              <div class="menu__btn-line"></div>
+              <div class="menu__btn-line"></div>
+            </button>
             <ul class="menu__list">
               <li class="menu__item">
-                <a class="menu__link" href="#">Магазины</a>
+                <a class="menu__link" href="index.html">Магазины</a>
               </li>
               <li class="menu__item">
                 <a class="menu__link" href="#">Акции</a>
@@ -38,7 +43,7 @@
           </a>
 
           <div class="header__box">
-            <p class="header__adress">
+            <p class="header__address">
               Москва,  ул. Науки  25
             </p>
             <ul class="user-list">
@@ -63,7 +68,105 @@
         </div>
       </div>
     </div>
+    <ul class="menu-mobile__list">
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">
+          <img class="menu-mobile__img" src="assets/images/user.svg" alt="user">
+          <p>Войти</p>
+        </a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">
+          <img class="menu-mobile__img" src="assets/images/user.svg" alt="user">
+          <p>Регистрация</p>
+        </a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">
+          <img class="menu-mobile__img" src="assets/images/heart.svg" alt="heart">
+          <p>Избранное</p>
+        </a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">
+          <img class="menu-mobile__img" src="assets/images/basket.svg" alt="basket">
+          <p>Корзина</p>
+        </a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">
+          <img class="menu-mobile__img" src="assets/images/house.svg" alt="house">
+          <p>Магазины</p>
+        </a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">
+          <img class="menu-mobile__img" src="assets/images/procent.svg" alt="procent">
+          <p>Акции</p>
+        </a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">
+          <img class="menu-mobile__img" src="assets/images/box.svg" alt="box">
+          <p>Доставка и оплата</p>
+        </a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">
+          <p>Квадроциклы</p>
+        </a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">
+          <p>Катера</p>
+        </a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">
+          <p>Гидроциклы</p>
+        </a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">
+          <p>Лодки</p>
+        </a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">
+          <p>Вездеходы</p>
+        </a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">
+          <p>Снегоходы</p>
+        </a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">
+          <p>Двигатели</p>
+        </a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">
+          <p>Запчасти</p>
+        </a>
+      </li>
+    </ul>
 
+    <div class="menu__mobile-linewrapper">
+      <ul class="menu__mobile-line">
+        <li class="menu__item">
+          <a class="menu__link" href="#">Магазины</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Акции</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Доставка и оплата</a>
+        </li>
+      </ul>
+    </div>
+    
     <div class="header__bottom">
       <div class="container">
           <ul class="menu-categories">
@@ -74,7 +177,7 @@
               <a class="menu-categories__link" href="#">Катера</a>
             </li>
             <li class="menu-categories__item">
-              <a class="menu-categories__link" href="#">Гидроциклы</a>
+              <a class="menu-categories__link" href="catalog.html">Гидроциклы</a>
             </li>
             <li class="menu-categories__item">
               <a class="menu-categories__link" href="#">Лодки</a>
@@ -98,14 +201,16 @@
 
   <div class="breadcrumbs">
     <div class="container">
-      <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__list-item">
-          <a href="#">Главная</a>
-        </li>
-        <li class="breadcrumbs__list-item">
-          <a href="#">Гидроциклы</a>
-        </li>
-      </ul>
+      <div class="breadcrumbs__inner">
+        <ul class="breadcrumbs__list mobile-overflow">
+          <li class="breadcrumbs__list-item">
+            <a href="#">Главная</a>
+          </li>
+          <li class="breadcrumbs__list-item">
+            <a href="#">Гидроциклы</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -113,11 +218,13 @@
     <div class="container">
       <h2 class="catalog__title">Гидроциклы</h2>
       <div class="catalog__filter">
-        <div class="catalog__filter-items">
-          <button>Полноприводные</button>
-          <button>от 5000</button>
-          <button>BRP</button>
-          <button>еще</button>
+        <div class="catalog__filter-itemsinner tabs-wrapper--no-scroll">
+          <div class="catalog__filter-items mobile-overflow">
+            <button>Полноприводные</button>
+            <button>от 5000</button>
+            <button>BRP</button>
+            <button>еще</button>
+          </div>
         </div>
         <div class="catalog__filter-btn">
           <select class="filter-style select-item">
@@ -150,13 +257,16 @@
         </div>
       </div>
       <div class="catalog__inner">
-
+        <aside class="aside__btn">
+          Фильтр
+        </aside>
         <aside class="catalog__inner-aside aside-filter">
-          <div class="tabs-wrapper">
+          <div class="tabs-wrapper tabs-wrapper--no-scroll">
             <div class="tabs aside-filter__tabs">
               <a class="tab aside-filter__tab tab--active" href="#filter-1"><span>Параметры</span></a>
               <a class="tab aside-filter__tab tab" href="#filter-2"><span>по марке</span></a>
             </div>
+          </div>
             <div class="tabs-container">
               <div id="filter-1" class="tabs-content aside-filter__tabs-content tabs-content--active">
 
@@ -385,7 +495,6 @@
               </div>
               <div id="filter-2" class="tabs-content aside-filter__tabs-content">content-2</div>
             </div>
-          </div>
         </aside>
 
         <div class="catalog__inner-list">
@@ -720,8 +829,8 @@
               <button class="footer-form__btn" type="submit">Отправить</button>
             </form>
           </div>
-          <div class="footer__top-item">
-            <h6 class="footer__top-title">
+          <div class="footer__top-item footer__top-itemdrop">
+            <h6 class="footer__top-title footer__topdrop">
               Информация
             </h6>
             <ul class="footer-list">
@@ -732,7 +841,7 @@
             </ul>
           </div>
           <div class="footer__top-item">
-            <h6 class="footer__top-title">
+            <h6 class="footer__top-title footer__topdrop">
               Интернет-магазин
             </h6>
             <ul class="footer-list">

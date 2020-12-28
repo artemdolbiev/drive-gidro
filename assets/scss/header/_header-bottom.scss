@@ -1,5 +1,11 @@
 .header__bottom {
-  margin-bottom: 80px;
+
+  @include lg-min {
+    margin-bottom: 80px;
+  }
+  @include lg {
+    display: none;
+  }
 }
 
 .menu-categories {

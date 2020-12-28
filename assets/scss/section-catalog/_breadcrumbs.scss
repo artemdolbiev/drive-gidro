@@ -29,4 +29,10 @@
       }
     }
   }
+
+  &__inner {
+    @include lg {
+      overflow-x: scroll;
+    }
+  }
 }

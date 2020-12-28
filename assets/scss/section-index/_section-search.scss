@@ -1,23 +1,33 @@
 
-.search__tabs{
+.search__tabs {
   margin-bottom: 25px;
 
   &-item {
+
     padding: 11px 26px 12px;
   }
 }
 
 .search__tabs-item.tab--active {
-  border-radius: 5px;
-  background:  #F0F0F4;
   font-weight: 700;
   font-family: 'SFProDisplay-Bold', sans-serif;
+
+  @include md-min {
+    border-radius: 5px;
+    background:  #F0F0F4;
+  }
+  @include md {
+    border-bottom: 2px solid #1c62cd;
+  }
 }
 
 .search__content {
 
   &-form {
     display: flex;
+    @include md {
+      position: relative;
+    }
   }
 
   &-input {
@@ -27,6 +37,10 @@
     border: none;
     padding: 5px 20px;
     width: 100%;
+    @include md {
+      height: 50px;
+      padding-right: 50px;
+    }
 
     &::placeholder {
       color: #656464;
@@ -35,22 +49,38 @@
   }
 
   &-btn {
-    font-family: 'SFProDisplay-Bold', sans-serif;
-    font-weight: 700;
-    font-size: 0.875rem;
-    line-height: 17px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 17px 41px;
+    @include md-min {
+      font-family: 'SFProDisplay-Bold', sans-serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      line-height: 17px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 17px 41px;
+  
+      background-color: #1c62cd;
+      border-radius: 3px;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      margin-left: -3px;
+    }
 
-    background-color: #1c62cd;
-    border-radius: 3px;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    margin-left: -3px;
-    
+    @include md {
+      font-size: 0;
+      width: 24px;
+      height: 24px;
+      padding: 17px;
+      background-image: url('/assets/images/search.svg');
+      background-repeat: no-repeat;
+  
+      border: none;
+      position: absolute;
+      right: 8px;
+      top: 13px;
+
+    }
   }
 }
 
@@ -61,3 +91,4 @@
 .tabs-content.tabs-content--active {
   display: block;
 }
+

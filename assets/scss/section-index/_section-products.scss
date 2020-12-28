@@ -6,6 +6,9 @@
     font-size: 1.5625rem;
     line-height: 30px;
     margin-bottom: 25px;
+    @include xs {
+      text-align: center;
+    }
   }
 
   &__tabs {
@@ -223,8 +226,13 @@
 }
 
 .product__more {
-  margin: 35px 0 0;
   text-align: center;
+  @include ul-min {
+    margin: 60px 0 0;
+  }
+  @include ul {
+    margin: 60px 0 0;
+  }
 
   &-link {
     background: #f0f0f4;
@@ -236,5 +244,17 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
+}
+
+.product-slider .slick-dots {
+  bottom: -30px;
+
+  & button {
+    background-color: #c4c4c4;
+  }
+}
+
+.product-slider .slick-dots .slick-active button {
+  background-color: #1c62cd;
 }
 
