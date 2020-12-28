@@ -2386,6 +2386,7 @@ body {
 .footer-form__btn {
   border: none;
   background-color: #1C62CD;
+  padding: 10px 16px;
   font-family: 'SFProDisplay-Semibold', sans-serif;
   font-weight: 600;
   font-size: 11px;
@@ -2453,9 +2454,6 @@ body {
   }
   .footer__top-social {
     width: 250px;
-  }
-  .footer-form__btn {
-    padding: 10px 16px;
   }
   .footer__bottom {
     -webkit-box-pack: center;
@@ -2891,9 +2889,6 @@ body {
   }
   .footer-list {
     display: none;
-  }
-  .footer-form__btn {
-    padding: 10px 8px;
   }
   .social-list {
     -webkit-box-pack: center;
